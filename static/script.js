@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // --- 状态变量 ---
     let selectedFiles = [];
-    let currentModel = 'Qwen/Qwen-Image';
+    let currentModel = 'Qwen/Qwen-Image-2515';
     
     const modelStates = {};
     modelCards.forEach(card => {
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         else { nanobananaControls.classList.add('hidden'); modelscopeControls.classList.remove('hidden'); }
         nanobananaPromptRemark.textContent = ''; modelscopePromptRemark.textContent = ''; modelscopeNegativePromptRemark.textContent = '';
         if (currentModel === 'nanobanana') { nanobananaPromptRemark.textContent = '(支持中文提示词)'; } 
-        else { let remarkText = ''; if (currentModel === 'Qwen/Qwen-Image') { remarkText = '(支持中文提示词)'; } else if (currentModel.includes('FLUX') || currentModel.includes('Kontext') || currentModel.includes('Krea')) { remarkText = '(请使用英文提示词)'; } modelscopePromptRemark.textContent = remarkText; modelscopeNegativePromptRemark.textContent = remarkText; }
+        else { let remarkText = ''; if (currentModel === 'Qwen/Qwen-Image-2515') { remarkText = '(支持中文提示词)'; } else if (currentModel.includes('FLUX') || currentModel.includes('Kontext') || currentModel.includes('Krea')) { remarkText = '(请使用英文提示词)'; } modelscopePromptRemark.textContent = remarkText; modelscopeNegativePromptRemark.textContent = remarkText; }
     }
     
     function setupInputValidation() {
